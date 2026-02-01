@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="left-wrap">
+          <div class="logo">
+            <img src="./logo.svg" alt="Logo" />
+          </div>
+          <div class="desc">
+            <h2>Education Platform</h2>
+            <p>
+              Learn and grow with our comprehensive educational resources
+              anytime, anywhere.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="right-wrap">
+          <div class="form">
+            <input type="radio" name="tab" id="login" checked hidden />
+            <input type="radio" name="tab" id="register" hidden />
+
+            <div class="tabs">
+              <label for="login" class="tab login-tab">Login</label>
+              <label for="register" class="tab register-tab">Register</label>
+            </div>
+
+            <!-- Login Form -->
+            <form class="login-form" action="#login">
+              <h2>Welcome Back</h2>
+              <input type="text" placeholder="Username" required />
+              <input type="password" placeholder="Password" required />
+              <p class="forgot"><a href="#forgot-password">Forgot Password?</a></p>
+              <button type="submit">Login</button>
+            </form>
+
+            <!-- Register Form -->
+            <form class="signup-form" action="#signup">
+              <h2>Create Account</h2>
+              <input type="text" placeholder="Name" required />
+              <input type="email" placeholder="Email" required />
+              <input type="password" placeholder="Password" required />
+              <button type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

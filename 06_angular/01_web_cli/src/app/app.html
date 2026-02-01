@@ -1,0 +1,18 @@
+<div class="terminal">
+  @for (line of outputHistory(); track $index) {
+    <p class="line">{{ line }}</p>
+  }
+
+  <div class="input-line"  *ngIf="!isProcessing()">
+    
+    <span class="prompt">$</span>
+    
+    <input
+      #input
+      type="text"
+      placeholder="Enter command"
+      autofocus
+      (keyup.enter)="executeCommand(input.value); input.value=''"
+    />
+  </div>
+</div>
