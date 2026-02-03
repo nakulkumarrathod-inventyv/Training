@@ -1,0 +1,12 @@
+<main>
+<h2>{{ title }}</h2>
+
+<!-- <input matInput placeholder="Edit name" [ngModel)]="users()"/> -->
+<app-profile-list
+  [users]="users()"
+  (statusChange)="onStatusChange($event)"
+>
+
+</app-profile-list>
+</main>
+

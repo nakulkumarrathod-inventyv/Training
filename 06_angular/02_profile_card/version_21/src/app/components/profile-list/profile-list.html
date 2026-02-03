@@ -1,0 +1,58 @@
+<div class="profile-details">
+
+  @for (user of users(); track user.username) {
+
+    <mat-card class="profile-card"
+      [class.active]="user.status === 'active'"
+      [class.inactive]="user.status === 'inactive'"
+      [class.blocked]="user.status === 'blocked'"
+    >
+
+      <img [src]="user.imageUrl" />
+
+      <p>Name: {{ user.username }}</p>
+      <p>Age: {{ user.age }}</p>
+
+      <mat-form-field appearance="outline">
+        <input
+          matInput
+          #nameInput
+          placeholder="Edit name"
+          [(ngModel)]="user.username"
+        />
+      </mat-form-field>
+
+      @if(user.status === 'active') {
+        <p class="status-active">Status: {{ user.status }}</p>
+      } 
+      @else if(user.status === 'inactive') {
+        <p class="status-inactive">Status: {{ user.status }}</p>
+      }
+      @else {
+        <p class="status-blocked">Status: {{ user.status }}</p>
+      }
+
+      @if(user.username === '') {
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="toggleStatus(user)"
+          disabled
+        >
+          Toggle Status
+        </button>
+      }
+      @else {
+        <button
+          matButton="filled"
+          (click)="toggleStatus(user)"
+        >
+          Toggle Status
+        </button>
+      }
+
+    </mat-card>
+  }
+</div>
+
+

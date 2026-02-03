@@ -1,0 +1,74 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1rem, 4vw, 2.5rem);
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 0.15rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.navbar-left,
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.logo {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #e94560;
+}
+
+.cart-count {
+  font-size: clamp(0.8rem, 1.8vw, 1rem);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.35em 0.75em;
+  border-radius: 1.5em;
+  color: #ccc;
+}
+
+.auth-btn {
+  font-size: clamp(0.8rem, 1.8vw, 0.95rem);
+  padding: 0.45em 1.2em;
+  border: none;
+  border-radius: 1.5em;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.25s, transform 0.15s;
+  color: #fff;
+}
+
+.auth-btn.login {
+  background: #e94560;
+}
+
+.auth-btn.login:hover {
+  background: #c73652;
+}
+
+.auth-btn.signup {
+  background: #0f3460;
+  border: 0.1em solid #e94560;
+}
+
+.auth-btn.signup:hover {
+  background: #e94560;
+}
+
+.auth-btn:active {
+  transform: scale(0.95);
+}
+
+@media (max-width: 28rem) {
+  .navbar {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}

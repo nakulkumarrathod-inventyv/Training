@@ -1,0 +1,29 @@
+<section class="product-section">
+  <h1 class="section-title">Products</h1>
+
+  <div class="product-grid">
+      <div class="product-card" *ngFor="let i of items">
+        <img
+          [src]="i.image"
+          alt="{{ i.name }}"
+          class="product-image"
+        />
+
+        <p class="product-name">
+          {{ i.name }}
+        </p>
+
+        <p class="product-price">
+          ₹{{ i.price }}
+        </p>
+
+        <button
+          class="add-btn"
+          (click)="addToCart(i.id)"
+        >
+          Add To Cart
+        </button>
+      </div> 
+  </div>
+</section>
+

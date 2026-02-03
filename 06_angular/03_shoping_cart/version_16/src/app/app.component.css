@@ -1,0 +1,26 @@
+.main-layout {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  padding: clamp(1rem, 3vw, 2rem);
+  max-width: 90rem;
+  margin: 0 auto;
+  min-height: calc(100vh - 4rem);
+}
+
+.main-layout > :first-child {
+  flex: 3;
+  min-width: 0;
+}
+
+.main-layout > :last-child {
+  flex: 2;
+  min-width: 0;
+}
+
+/* Stack vertically on smaller screens */
+@media (max-width: 52rem) {
+  .main-layout {
+    flex-direction: column;
+    padding: clamp(0.75rem, 2.5vw, 1rem);
+  }
+}

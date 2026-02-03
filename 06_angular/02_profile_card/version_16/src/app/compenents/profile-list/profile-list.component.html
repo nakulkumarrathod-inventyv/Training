@@ -1,0 +1,34 @@
+<div class="profile-details">
+  <mat-card
+    class="profile-card"
+    *ngFor="let user of data"
+    [ngClass]="user.status"
+  >
+    <img [src]="user.imageUrl" />
+
+    <p>name : {{ user.username }}</p>
+    <p>age : {{ user.age }}</p>
+
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        #nameInput
+        placeholder="Edit name"
+        [(ngModel)]="user.username"
+      />
+    </mat-form-field>
+
+    <p [ngClass]="'status-' + user.status">
+      status : {{ user.status }}
+    </p>
+
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="toggleStatus(user)"
+      [disabled]="user.username === ''"
+    >
+      Toggle Status
+    </button>
+  </mat-card>
+</div>

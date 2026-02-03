@@ -1,0 +1,20 @@
+<header class="navbar">
+  <div class="navbar-left">
+    <span class="logo">🛒 ShopMart</span>
+  </div>
+
+  <div class="navbar-right">
+    <span class="cart-count">
+      Cart: {{ data.countCartItem }}
+    </span>
+
+    <button
+      class="auth-btn"
+      [class.login]="!data.isLogin"
+      [class.signup]="data.isLogin"
+      (click)="toggleLogin()"
+    >
+      {{ data.isLogin ? 'Logout' : 'Login' }}
+    </button>
+  </div>
+</header>

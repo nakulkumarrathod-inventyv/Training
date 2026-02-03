@@ -1,0 +1,48 @@
+<section class="cart-section">
+  <h1 class="section-title">Your Cart</h1>
+
+  <div class="cart-list">
+    @for (i of data.cartList(); track i.id) {
+      <mat-card class="cart-card">
+        <img
+          [src]="i.image"
+          alt="{{ i.name }}"
+          class="cart-image"
+        />
+
+        <div class="cart-info">
+          <p class="item-name">
+            {{ i.name }}
+          </p>
+
+          <p class="item-price">
+            ₹{{ i.totalPrice }}
+          </p>
+        </div>
+
+        <div class="cart-actions">
+          <button class="qty-btn" (click)="decrease(i.id)">-</button>
+
+          <span class="item-count">
+            {{ i.count }}
+          </span>
+
+          <button class="qty-btn" (click)="increase(i.id)">+</button>
+
+          <button
+            class="remove-btn"
+            (click)="remove(i.id)"
+          >
+            Remove
+          </button>
+        </div>
+      </mat-card>
+    }
+  </div>
+
+  <div class="cart-total">
+    Total Amount:
+    <strong>₹{{ data.totalAmount() }}</strong>
+  </div>
+</section>
+

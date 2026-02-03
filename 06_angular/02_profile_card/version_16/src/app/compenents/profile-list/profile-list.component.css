@@ -1,0 +1,64 @@
+.profile-details {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(clamp(14rem, 22vw, 18rem), 1fr)
+  );
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  padding: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  padding: clamp(0.75rem, 2vw, 1.25rem);
+  border-radius: clamp(0.75rem, 2vw, 1.5rem);
+  transition: transform 0.2s ease-in-out;
+}
+
+.profile-card:hover {
+  transform: translateY(-0.25rem);
+}
+
+.profile-card img {
+  width: clamp(2.5rem, 4vw, 3.5rem);
+  height: clamp(2.5rem, 4vw, 3.5rem);
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profile-card p {
+  margin: 0;
+  font-size: clamp(0.95rem, 1.3vw, 1.1rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.active {
+  border-bottom: 0.3rem solid #2e7d32;
+  background-color: #dffde1; 
+}
+
+.inactive {
+  border-bottom: 0.3rem solid #f9a825;
+  background-color: #faf8df;
+}
+
+.blocked {
+  border-bottom: 0.3rem solid #c62828;
+  background-color: #fce5e5;
+}
+
+.status-active {
+  color: #2e7d32;
+}
+
+.status-inactive {
+  color: #f9a825;
+}
+
+.status-blocked {
+  color: #c62828;
+}

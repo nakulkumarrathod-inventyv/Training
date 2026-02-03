@@ -21,6 +21,32 @@ Training/
 │       └── script.js
 ├── 05_exercism/
 ├── 06_angular/
+│   ├── 01_web_cli/
+│   │   ├── //logic
+│   │   └── README.md
+│   ├── 02_profile_card/
+│   │   ├── version_16
+│   │   │   ├── //logic
+│   │   │   └── README.md
+│   │   ├── version_18
+│   │   │   ├── //logic
+│   │   │   └── README.md
+│   │   ├── version_21
+│   │   │   ├── //logic
+│   │   │   └── README.md
+│   │   └── README.md
+│   ├── 03_shoping_cart/
+│   │   ├── version_16
+│   │   │   ├── //logic
+│   │   │   └── README.md
+│   │   ├── version_18
+│   │   │   ├── //logic
+│   │   │   └── README.md
+│   │   ├── version_21
+│   │   │   ├── //logic
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── 04_auth_token
 └── README.md
 ```
 
@@ -68,9 +94,24 @@ This folder contains JavaScript practice tasks.
 
 ## 06_angular
 
+### Web CLI
+
 This task is a small **Angular project** that works like an **Angular CLI terminal in browser**.  
 User can type commands and see CLI-like output step by step.  
 Angular **Signals** are used for state and UI control.  
 This task helps to understand signals, component logic, and event handling.
+
+### Profile Card
+The Profile Card project demonstrates core Angular concepts like component-based design and data binding.  
+It covers parent–child communication, lifecycle hooks, and UI state handling.  
+Version-wise implementation shows the evolution from module-based Angular to standalone components and signals.  
+This project helps build a strong foundation in Angular component architecture.
+
+### Shopping Cart
+The Shopping Cart project focuses on real-world state management and user interaction logic.  
+It implements cart operations such as add, remove, and quantity updates using services and signals.  
+Different Angular versions highlight the shift from traditional services to reactive signal-based state.  
+This project is useful for understanding scalable Angular application design.
+
 
 ---
