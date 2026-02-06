@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="button-container">
+      <button (click)="login()">Login</button>
+      <button (click)="loadProfile()">Get Profile</button>
+    </div>
+
+    <p *ngIf="auth.accessToken">{{auth.accessToken}}</p>
+    <p *ngIf="!auth.accessToken">Login First To Get Profile</p>
+
+    <div *ngIf="auth.profile as p">
+      <h2>{{ p.firstName }} {{ p.lastName }}</h2>
+      <p><strong>Email:</strong> {{ p.email }}</p>
+      <p><strong>Role:</strong> {{ p.role }}</p>
+    </div>
+  </div>
