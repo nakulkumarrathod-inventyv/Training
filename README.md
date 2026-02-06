@@ -22,31 +22,32 @@ Training/
 ├── 05_exercism/
 ├── 06_angular/
 │   ├── 01_web_cli/
-│   │   ├── //logic
 │   │   └── README.md
 │   ├── 02_profile_card/
 │   │   ├── version_16
-│   │   │   ├── //logic
 │   │   │   └── README.md
 │   │   ├── version_18
-│   │   │   ├── //logic
 │   │   │   └── README.md
 │   │   ├── version_21
-│   │   │   ├── //logic
 │   │   │   └── README.md
 │   │   └── README.md
 │   ├── 03_shoping_cart/
 │   │   ├── version_16
-│   │   │   ├── //logic
 │   │   │   └── README.md
 │   │   ├── version_18
-│   │   │   ├── //logic
 │   │   │   └── README.md
 │   │   ├── version_21
-│   │   │   ├── //logic
 │   │   │   └── README.md
 │   │   └── README.md
-│   └── 04_auth_token
+│   ├── 04_interceptor/
+│   │   ├── version_16
+│   │   │   └── README.md
+│   │   ├── version_18
+│   │   │   └── README.md
+│   │   ├── version_21
+│   │   │   └── README.md
+│   │   └── README.md
+│   └── README.md //pending
 └── README.md
 ```
 
@@ -113,5 +114,6 @@ It implements cart operations such as add, remove, and quantity updates using se
 Different Angular versions highlight the shift from traditional services to reactive signal-based state.  
 This project is useful for understanding scalable Angular application design.
 
+### Interceptor
 
 ---
